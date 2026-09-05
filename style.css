@@ -1,0 +1,22 @@
+/* 👑 SHOPNOVA PREMIUM DESIGN SYSTEM */
+:root {
+    --bg: #050505;
+    --surface: #121212;
+    --accent: #D4AF37;
+    --text: #FFFFFF;
+    --text-dim: #A1A1AA;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
