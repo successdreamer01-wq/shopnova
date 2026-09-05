@@ -1,22 +1,118 @@
-/* 👑 SHOPNOVA PREMIUM DESIGN SYSTEM */
-:root {
-    --bg: #050505;
-    --surface: #121212;
-    --accent: #D4AF37;
-    --text: #FFFFFF;
-    --text-dim: #A1A1AA;
-    --border: rgba(255, 255, 255, 0.08);
+/* 👑 SHOPNOVA PREMIUM STYLE UPDATE */
+
+/* 1. Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--accent);
+    letter-spacing: 1px;
 }
 
-body {
-    background-color: var(--bg);
-    color: var(--text);
-    -webkit-font-smoothing: antialiased;
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* 2. Hero Section Styling */
+.hero {
+    padding: 100px 5%;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.hero p {
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* 3. Intelligent Search Bar */
+.hero-search {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    background: var(--surface);
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+}
+
+.hero-search input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.hero-search button {
+    background: var(--accent);
+    color: black;
+    border: none;
+    padding: 0 30px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* 4. Buttons */
+.hero-ctas {
+    margin-top: 30px;
+}
+
+.cta-primary, .cta-secondary {
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-primary {
+    background: white;
+    color: black;
+    border: none;
+}
+
+.cta-secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid var(--border);
 }
