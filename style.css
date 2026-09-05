@@ -222,3 +222,103 @@
     background: white;
     color: black;
 }
+/* 👑 SECTION 05 — CATEGORY UNIVERSE STYLING */
+.category-universe {
+    padding: 80px 5%;
+    background: #050505;
+}
+
+.category-header {
+    margin-bottom: 50px;
+}
+
+.category-header p {
+    color: var(--text-dim);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 20px;
+}
+
+.cat-tile {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+}
+
+/* Creating Visual Rhythm with different sizes */
+.cat-tile.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.cat-tile.medium {
+    grid-column: span 2;
+}
+
+.cat-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+.cat-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.cat-content span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.cat-content h3 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Premium Hover Effects */
+.cat-tile:hover {
+    border-color: var(--accent);
+    transform: scale(0.98);
+}
+
+.cat-tile:hover .cat-overlay {
+    opacity: 0.7;
+    background: var(--accent);
+}
+
+.cat-tile:hover .cat-content span {
+    transform: translateY(-10px) scale(1.2);
+}
+
+.cat-tile:hover h3 {
+    color: black;
+}
+
+/* Mobile Responsive Grid */
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cat-tile.large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
