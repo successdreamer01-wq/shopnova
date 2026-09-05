@@ -116,3 +116,109 @@
     color: white;
     border: 1px solid var(--border);
 }
+/* 👑 SECTION 03 — TRUST STRIP STYLING */
+.trust-strip {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 5%;
+    background: #0a0a0a;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.trust-item {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 👑 SECTION 04 — TODAY'S DEALS STYLING */
+.deals-section {
+    padding: 80px 5%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.deal-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.deal-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.card-image {
+    height: 200px;
+    background: #1a1a1a; /* Placeholder for product image */
+    width: 100%;
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.platform-tag {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-info h3 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.current-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.discount {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.deal-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.deal-card:hover .deal-btn {
+    background: white;
+    color: black;
+}
