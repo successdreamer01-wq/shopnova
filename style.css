@@ -1085,3 +1085,218 @@ button {
         font-size: 32px;
     }
 }
+/* --- PRODUCT DETAILS PAGE DESIGN --- */
+
+/* 1. Page Layout */
+.product-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* फोटो के लिए थोड़ा ज्यादा स्पेस */
+    gap: 60px;
+    padding: 60px 20px;
+    align-items: start;
+}
+
+/* 2. Visuals (Images) */
+.product-visuals .main-image-card {
+    background: #f9f9f9;
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    border: 1px solid var(--gray-100);
+    margin-bottom: 20px;
+}
+
+.main-image-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* सफेद बैकग्राउंड वाली इमेज के लिए बेस्ट */
+}
+
+.image-gallery-mini {
+    display: flex;
+    gap: 15px;
+}
+
+.mini-img {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--gray-100);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.mini-img.active {
+    border-color: var(--mint);
+}
+
+/* 3. Product Info Section */
+.platform-badge-large {
+    display: inline-block;
+    background: #fff8e1;
+    color: #ffa000;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.product-full-name {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.rating-row {
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.price-display-large {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.price-display-large .current-price {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.discount-percent {
+    color: #00C853;
+    font-weight: 700;
+}
+
+.product-short-desc {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* 4. Highlights Box */
+.product-highlights {
+    background: var(--gray-100);
+    padding: 25px;
+    border-radius: var(--radius-md);
+    margin-bottom: 40px;
+}
+
+.product-highlights h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.product-highlights ul {
+    list-style: none;
+}
+
+.product-highlights li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* 5. CTA Buttons */
+.action-buttons-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-buy-now {
+    background: var(--black);
+    color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btn-buy-now:hover {
+    background: var(--mint);
+    color: var(--black);
+    transform: scale(1.02);
+}
+
+.btn-add-wishlist {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    padding: 15px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+}
+
+.update-note {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+/* 6. Comparison Table (The Truth Table) */
+.price-table-section {
+    padding: 60px 20px 100px 20px;
+}
+
+.comparison-table {
+    margin-top: 30px;
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr;
+    padding: 20px 30px;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-100);
+    background: var(--white);
+}
+
+.table-row.header {
+    background: var(--gray-100);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.table-row.best {
+    background: #f0fff4;
+}
+
+.m-logo { font-weight: 800; font-size: 18px; }
+.m-price { font-weight: 800; font-size: 20px; }
+.m-btn {
+    padding: 10px 20px;
+    background: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.m-btn.outline {
+    background: transparent;
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+    .table-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .table-row span:nth-child(n+3) {
+        display: none; /* मोबाइल पर सिर्फ स्टोर और प्राइस दिखाएं */
+    }
+}
