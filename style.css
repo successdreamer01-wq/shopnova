@@ -1816,3 +1816,83 @@ button {
         top: 10px;
     }
 }
+/* --- 📱 MOBILE BOTTOM NAVIGATION DESIGN --- */
+
+/* 1. Hide on Desktop (By default) */
+.mobile-bottom-nav {
+    display: none; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9); /* प्रीमियम ग्लास लुक */
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--gray-100);
+    padding: 10px 0;
+    z-index: 2000;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 2. Show only on Mobile */
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        display: flex;
+    }
+
+    /* मोबाइल पर फुटर के नीचे थोड़ी जगह छोड़ना ताकि बार कंटेंट न ढके */
+    body {
+        padding-bottom: 80px; 
+    }
+
+    /* मोबाइल पर डेस्कटॉप वाली नेवबार को थोड़ा छोटा करना */
+    .nav-links {
+        display: none; /* मोबाइल पर पुराने लिंक्स हटा दें क्योंकि अब बॉटम नेव है */
+    }
+}
+
+/* 3. Navigation Item Styles */
+.nav-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #888;
+    transition: var(--transition);
+    flex: 1;
+}
+
+.nav-icon {
+    font-size: 20px;
+}
+
+.nav-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--black);
+}
+
+.nav-item:active {
+    transform: scale(0.9); /* दबाने पर छोटा होने वाला एनीमेशन (Haptic feel) */
+}
+
+/* 4. Special 'Search' Glow in Bottom Nav */
+.nav-item[href="search.html"] .nav-icon {
+    background: var(--mint);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--black);
+    margin-top: -20px; /* बीच वाला बटन ऊपर उठा हुआ */
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+}
