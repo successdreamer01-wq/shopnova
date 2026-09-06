@@ -1634,3 +1634,185 @@ button {
     .deals-hero-area { padding: 60px 20px; }
     .deals-filter-sticky { top: 60px; }
 }
+/* --- ⭐ TRENDING PAGE PREMIUM DESIGN --- */
+
+/* 1. Trending Hero */
+.trending-hero {
+    background: #fdfdfd;
+    padding: 80px 0 40px 0;
+    text-align: center;
+}
+
+.trending-badge {
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* 2. Rank #1 Pick (The Hero Product) */
+.trending-rank-one {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 60px;
+    position: relative;
+    padding: 60px;
+    align-items: center;
+}
+
+.rank-number {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 150px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.05); /* बहुत हल्का नंबर बैकग्राउंड में */
+    z-index: 1;
+}
+
+.rank-image {
+    z-index: 2;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: var(--radius-md);
+}
+
+.rank-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.rank-details {
+    z-index: 2;
+}
+
+.trend-stat {
+    display: block;
+    color: #ff4757;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.rank-details h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* 3. Popular Searches Cloud */
+.popular-searches-section {
+    margin-bottom: 60px;
+    padding: 40px;
+    background: var(--gray-100);
+    border-radius: var(--radius-md);
+}
+
+.popular-searches-section h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.keyword-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.keyword-cloud a {
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.keyword-cloud a:hover {
+    background: var(--mint);
+    border-color: var(--mint);
+}
+
+/* 4. Trending Grid (Rank 2+) */
+.trending-grid-mix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.trend-rank-card {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.trend-rank-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-premium);
+}
+
+.rank-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--black);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 14px;
+    z-index: 2;
+}
+
+.trend-rank-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.trend-info {
+    padding: 20px;
+}
+
+.trend-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.trend-info .price {
+    font-weight: 800;
+    color: var(--black);
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .trending-rank-one {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+    .rank-number {
+        font-size: 80px;
+        top: 10px;
+    }
+}
