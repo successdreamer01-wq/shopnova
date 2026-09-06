@@ -637,3 +637,165 @@ button {
         font-size: 28px;
     }
 }
+/* --- SECTION 07: SMART COMPARISON DESIGN --- */
+.smart-comparison {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.center { text-align: center; }
+.center .section-title::after { left: 50%; transform: translateX(-50%); }
+
+.comparison-container {
+    margin-top: 60px;
+    background: #fdfdfd;
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    border: 1px solid var(--gray-200);
+}
+
+/* Product Info Bar */
+.compare-product-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: 40px;
+}
+
+.compare-product-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+}
+
+.info-details h3 {
+    font-size: 24px;
+    color: var(--black);
+}
+
+.category-tag {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--mint);
+    text-transform: uppercase;
+}
+
+/* Comparison Grid & Cards */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.compare-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+    position: relative;
+    transition: var(--transition);
+}
+
+/* The "Best Value" Special Style */
+.compare-card.best-value {
+    border: 2px solid var(--mint);
+    box-shadow: 0 15px 40px rgba(0, 255, 136, 0.1);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.winner-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--mint);
+    color: var(--black);
+    padding: 5px 20px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.marketplace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.m-logo {
+    font-weight: 800;
+    font-size: 18px;
+}
+.m-logo.amazon { color: #FF9900; }
+.m-logo.flipkart { color: #2874F0; }
+.m-logo.meesho { color: #ff3f6c; }
+
+.last-updated {
+    font-size: 11px;
+    color: #999;
+}
+
+.compare-price {
+    margin-bottom: 25px;
+}
+
+.price-label {
+    display: block;
+    font-size: 13px;
+    color: #888;
+}
+
+.compare-price .value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--black);
+}
+
+.compare-status {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--gray-200);
+}
+
+.status.available { color: #00C853; font-weight: 700; }
+.status.out-of-stock { color: #ff3d00; font-weight: 700; }
+
+.btn-compare {
+    width: 100%;
+    padding: 15px;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    background: var(--black);
+    color: var(--white);
+}
+
+.btn-compare.outline {
+    background: transparent;
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+.best-value .btn-compare {
+    background: var(--mint);
+    color: var(--black);
+}
+
+/* Mobile Tweak */
+@media (max-width: 768px) {
+    .compare-card.best-value {
+        transform: scale(1);
+        margin-bottom: 20px;
+    }
+    .compare-product-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
