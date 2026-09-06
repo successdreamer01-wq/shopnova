@@ -1514,3 +1514,123 @@ button {
     .wishlist-hero { padding: 40px 0; }
     .wishlist-layout { padding: 40px 20px; }
 }
+/* --- 🔥 DEALS PAGE PREMIUM DESIGN --- */
+
+/* 1. Deals Hero Section */
+.deals-hero-area {
+    background: var(--black); /* डार्क और प्रीमियम लुक */
+    padding: 100px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.live-tag {
+    display: inline-block;
+    background: rgba(0, 255, 136, 0.1);
+    color: var(--mint);
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    border: 1px solid var(--mint);
+    animation: pulse-mint 2s infinite; /* चमकने वाला एनीमेशन */
+}
+
+@keyframes pulse-mint {
+    0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+}
+
+.deals-hero-area .page-title {
+    font-size: clamp(32px, 6vw, 56px);
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.deals-hero-area p {
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 2. Sticky Filter Bar */
+.deals-filter-sticky {
+    position: sticky;
+    top: 70px; /* नेवबार के ठीक नीचे */
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 900;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.filter-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto; /* मोबाइल पर उंगली से सरकाने के लिए */
+    white-space: nowrap;
+    scrollbar-width: none; /* स्क्रॉल बार छुपाने के लिए */
+}
+
+.filter-scroll::-webkit-scrollbar { display: none; }
+
+.d-filter {
+    padding: 10px 22px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.d-filter.active, .d-filter:hover {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+}
+
+/* 3. Deal Card Enhancements */
+.deal-highlight {
+    border: 1px solid #ffebee; /* हल्का लाल बॉर्डर */
+}
+
+.product-badge.danger {
+    background: #FF3D00; /* 'लूट' दिखाने के लिए गहरा लाल */
+}
+
+.deal-timer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 61, 0, 0.1);
+    color: #FF3D00;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    z-index: 2;
+}
+
+.deals-layout {
+    padding: 60px 20px;
+}
+
+/* 4. Deal CTA Styling */
+.deal-highlight .deal-cta {
+    background: #FF3D00;
+    color: var(--white);
+}
+
+.deal-highlight .deal-cta:hover {
+    background: var(--black);
+}
+
+/* Responsive Tweak */
+@media (max-width: 768px) {
+    .deals-hero-area { padding: 60px 20px; }
+    .deals-filter-sticky { top: 60px; }
+}
