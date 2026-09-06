@@ -401,3 +401,104 @@ button {
 .product-card:hover .deal-cta {
     background: var(--mint);
 }
+/* --- SECTION 05: CATEGORY UNIVERSE DESIGN --- */
+.category-universe {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 20px;
+}
+
+.category-tile {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Make the first tile (Electronics) twice as wide */
+.category-tile.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.category-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.cat-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+    z-index: 1;
+}
+
+.cat-content {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 2;
+    color: var(--white);
+}
+
+.cat-content h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.category-tile.large .cat-content h3 {
+    font-size: 36px;
+}
+
+.cat-count {
+    display: block;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.cat-link {
+    color: var(--mint);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hover Animations */
+.category-tile:hover img {
+    transform: scale(1.1);
+}
+
+.category-tile:hover .cat-link {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive for Categories */
+@media (max-width: 992px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .category-tile.large {
+        grid-column: span 2;
+        grid-row: span 1;
+        height: 350px;
+    }
+    .category-tile {
+        height: 250px;
+    }
+}
