@@ -51,3 +51,150 @@ button {
     margin: 0 auto;
     padding: 0 20px;
 }
+/* --- SECTION 01: NAVBAR DESIGN --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px); /* कांच जैसा धुंधला प्रभाव */
+    border-bottom: 1px solid var(--gray-100);
+    padding: 15px 0;
+}
+
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--black);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    margin: 0 20px;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--mint);
+}
+
+.nav-links a.active {
+    color: var(--black);
+    border-bottom: 2px solid var(--mint);
+}
+
+.search-trigger {
+    background: none;
+    font-size: 20px;
+}
+
+/* --- SECTION 02: CINEMATIC HERO DESIGN --- */
+.hero {
+    padding: 120px 0 80px 0;
+    text-align: center;
+    background: radial-gradient(circle at top, #f0fdf4 0%, #ffffff 100%);
+    position: relative;
+}
+
+.hero-headline {
+    font-size: clamp(40px, 8vw, 72px); /* Responsive Typography */
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.hero-subtext {
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+/* Intelligent Search Bar */
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    display: flex;
+    background: var(--white);
+    padding: 8px;
+    border-radius: 100px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border: 1px solid var(--gray-200);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    padding: 0 30px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 100px;
+}
+
+.search-btn {
+    background: var(--black);
+    color: var(--white);
+    padding: 15px 40px;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+.search-btn:hover {
+    background: var(--mint);
+    color: var(--black);
+}
+
+.search-suggestions {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.search-suggestions span { color: #888; }
+
+.search-suggestions a {
+    color: var(--black);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.hero-ctas {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-main {
+    background: var(--black);
+    color: var(--white);
+    padding: 18px 40px;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--black);
+    border: 2px solid var(--black);
+    padding: 18px 40px;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-main:hover { transform: scale(1.05); }
+.btn-outline:hover { background: var(--black); color: var(--white); }
