@@ -979,3 +979,109 @@ button {
         flex-direction: column;
     }
 }
+/* --- PRODUCT LISTING PAGE DESIGN --- */
+
+/* 1. Listing Hero */
+.listing-hero {
+    background: #f8fafc;
+    padding: 60px 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.breadcrumb {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.page-title {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.page-desc {
+    color: #666;
+    max-width: 600px;
+}
+
+/* 2. Listing Layout (Sidebar + Results) */
+.listing-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* साइडबार 280px और बाकी जगह प्रोडक्ट्स के लिए */
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+/* 3. Filters Sidebar */
+.filters-sidebar {
+    position: sticky;
+    top: 100px; /* नेवबार के नीचे चिपका रहेगा */
+    height: fit-content;
+}
+
+.filter-group {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.filter-group h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #444;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-group label:hover {
+    color: var(--mint);
+}
+
+.filter-group input {
+    margin-right: 10px;
+    accent-color: var(--mint); /* चेकबॉक्स का रंग मिंट होगा */
+}
+
+/* 4. Results & Sorting Controls */
+.results-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.results-controls span {
+    font-weight: 600;
+    color: #888;
+}
+
+.sort-dropdown {
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+    outline: none;
+    font-weight: 600;
+}
+
+/* 5. Listing Page Responsive */
+@media (max-width: 992px) {
+    .listing-layout {
+        grid-template-columns: 1fr; /* मोबाइल पर साइडबार ऊपर चला जाएगा */
+    }
+    .filters-sidebar {
+        display: none; /* मोबाइल पर हम बाद में फिल्टर को 'Bottom Sheet' बनाएंगे */
+    }
+    .page-title {
+        font-size: 32px;
+    }
+}
