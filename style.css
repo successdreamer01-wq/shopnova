@@ -1300,3 +1300,136 @@ button {
         display: none; /* मोबाइल पर सिर्फ स्टोर और प्राइस दिखाएं */
     }
 }
+/* --- SEARCH RESULTS PAGE DESIGN --- */
+
+/* 1. Search Header Area */
+.search-header-area {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding: 80px 0 40px 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.search-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--mint);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.search-query {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 30px;
+    color: var(--black);
+}
+
+/* 2. Suggestion Chips (Intelligent Suggestions) */
+.suggestion-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.suggestion-chips span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #888;
+}
+
+.chip {
+    padding: 8px 20px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 100px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.chip:hover {
+    border-color: var(--mint);
+    background: #f0fdf4;
+    transform: translateY(-2px);
+}
+
+/* 3. Search Controls (Filters & Sorting) */
+.search-layout {
+    padding-top: 40px;
+}
+
+.search-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filter-pills {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* मोबाइल पर स्क्रॉल होगा */
+    padding-bottom: 5px;
+}
+
+.pill {
+    white-space: nowrap;
+    padding: 10px 20px;
+    background: #f1f5f9;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 700;
+    color: #475569;
+    transition: var(--transition);
+}
+
+.pill.active {
+    background: var(--black);
+    color: var(--white);
+}
+
+.pill:hover:not(.active) {
+    background: var(--gray-200);
+}
+
+.search-sort select {
+    padding: 10px 15px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+    font-weight: 600;
+    outline: none;
+}
+
+/* 4. Search Load More */
+.load-more-container {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.btn-load-more {
+    background: var(--white);
+    border: 2px solid var(--black);
+    padding: 15px 40px;
+    border-radius: var(--radius-md);
+    font-weight: 800;
+    transition: var(--transition);
+}
+
+.btn-load-more:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* Mobile Tweak for Search */
+@media (max-width: 768px) {
+    .search-header-area { padding: 40px 0; }
+    .search-query { font-size: 28px; }
+    .search-controls { flex-direction: column; align-items: flex-start; }
+    .filter-pills { width: 100%; }
+}
