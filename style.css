@@ -502,3 +502,138 @@ button {
         height: 250px;
     }
 }
+/* --- SECTION 06: TRENDING EXPERIENCE DESIGN --- */
+.trending-experience {
+    padding: 100px 0;
+    background: #fafafa;
+}
+
+.trending-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 हिस्से मुख्य प्रोडक्ट के लिए, 1 हिस्सा साइड के लिए */
+    gap: 30px;
+}
+
+/* Large Trend Hero */
+.trend-hero {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 600px;
+    background: var(--black);
+}
+
+.trend-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; /* इमेज को थोड़ा डार्क किया ताकि टेक्स्ट साफ़ दिखे */
+    transition: var(--transition);
+}
+
+.trend-hero:hover img {
+    transform: scale(1.05);
+    opacity: 0.5;
+}
+
+.trend-badge {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: var(--mint);
+    color: var(--black);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.trend-hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 50px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: var(--white);
+    z-index: 2;
+}
+
+.trend-hero-content h3 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.trend-hero-content p {
+    font-size: 18px;
+    color: #ccc;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+/* Side Discovery Stack */
+.trend-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trend-card-mini {
+    background: var(--white);
+    padding: 15px;
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+    height: calc(33.33% - 14px); /* तीन कार्ड्स बराबर फिट करने के लिए */
+}
+
+.trend-card-mini:hover {
+    transform: translateX(-10px);
+    box-shadow: var(--shadow-premium);
+    border-color: var(--mint);
+}
+
+.trend-card-mini img {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+}
+
+.trend-mini-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.trend-mini-info .price {
+    display: block;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.view-link {
+    text-decoration: none;
+    color: var(--mint);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Mobile Responsiveness for Trending */
+@media (max-width: 992px) {
+    .trending-layout {
+        grid-template-columns: 1fr;
+    }
+    .trend-hero {
+        height: 450px;
+    }
+    .trend-hero-content h3 {
+        font-size: 28px;
+    }
+}
