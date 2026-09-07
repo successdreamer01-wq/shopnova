@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- MOBILE BOTTOM NAVIGATION -->
+<!-- यह लाइन आपकी वेबसाइट का दिमाग चालू कर देगी -->
+    <script src="script.js"></script>
+
+    <script>
+        // यह छोटा सा कोड पक्का करेगा कि होमपेज पर प्रोडक्ट्स दिखें
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof loadProducts === 'function') {
+                loadProducts('home-deals-grid');
+            }
+        });
+    </script>
+    <!-- MOBILE BOTTOM NAVIGATION -->
     <nav class="mobile-bottom-nav">
         <a href="index.html" class="nav-item">
             <span class="nav-icon">🏠</span>
