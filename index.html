@@ -7,332 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- यह लाइन आपकी वेबसाइट का दिमाग चालू कर देगी -->
-    <script src="script.js"></script>
 
-    <script>
-        // यह छोटा सा कोड पक्का करेगा कि होमपेज पर प्रोडक्ट्स दिखें
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof loadProducts === 'function') {
-                loadProducts('home-deals-grid');
-            }
-        });
-    </script>
-    <!-- MOBILE BOTTOM NAVIGATION -->
-    <nav class="mobile-bottom-nav">
-        <a href="index.html" class="nav-item">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Home</span>
-        </a>
-        <a href="search.html" class="nav-item">
-            <span class="nav-icon">🔎</span>
-            <span class="nav-label">Search</span>
-        </a>
-        <a href="deals.html" class="nav-item">
-            <span class="nav-icon">🔥</span>
-            <span class="nav-label">Deals</span>
-        </a>
-        <a href="wishlist.html" class="nav-item">
-            <span class="nav-icon">❤️</span>
-            <span class="nav-label">Wishlist</span>
-        </a>
-        <a href="trending.html" class="nav-item">
-            <span class="nav-icon">⭐</span>
-            <span class="nav-label">Trending</span>
-        </a>
-    </nav>
-    <!-- SECTION 11: WHY SHOPNOVA -->
-    <section class="why-shopnova">
-        <div class="container">
-            <div class="section-header center">
-                <h2 class="section-title">Why SHOPNOVA?</h2>
-                <p>हम खरीदारी को आसान, समझदार और किफायती बनाते हैं।</p>
-            </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">🚀</div>
-                    <h3>Search Smarter</h3>
-                    <p>हजारों प्रोडक्ट्स में से अपने लिए सबसे सही विकल्प सेकंडों में खोजें।</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">⚖️</div>
-                    <h3>Compare Easily</h3>
-                    <p>Amazon, Flipkart और Meesho की कीमतों की एक ही जगह तुलना करें।</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">💰</div>
-                    <h3>Better Deals</h3>
-                    <p>सिर्फ असली और सबसे बड़ी छूट वाली डील्स हम आप तक पहुँचाते हैं।</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🔒</div>
-                    <h3>100% Trusted</h3>
-                    <p>हम केवल आधिकारिक और भरोसेमंद मार्केटप्लेस के साथ काम करते हैं।</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 12: FINAL CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-box">
-                <h2>आपकी अगली शानदार खरीदारी यहीं से शुरू हो सकती है।</h2>
-                <p>हजारों लोग SHOPNOVA के जरिए हर महीने लाखों की बचत कर रहे हैं। क्या आप तैयार हैं?</p>
-                <div class="cta-buttons">
-                    <button class="btn-main mint">Explore Products →</button>
-                    <button class="btn-outline white">Best Deals</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 13: PREMIUM FOOTER -->
-    <footer class="premium-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo white">SHOPNOVA</div>
-                    <p>Discover More. Shop Better.<br>बेहतर खोजिए, समझदारी से खरीदिए।</p>
-                    <div class="social-icons">
-                        <span>FB</span> <span>TW</span> <span>IG</span> <span>YT</span>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h4>Explore</h4>
-                    <a href="#">Home</a>
-                    <a href="#">Best Deals</a>
-                    <a href="#">Trending</a>
-                    <a href="#">Categories</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Affiliate Disclosure</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Disclaimer</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 SHOPNOVA. All rights reserved. Designed for Excellence.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- SECTION 07: SMART COMPARISON -->
-    <section class="smart-comparison">
-        <div class="container">
-            <div class="section-header center">
-                <h2 class="section-title">⚖️ कहाँ बेहतर Deal मिल रही है?</h2>
-                <p>हम टॉप मार्केटप्लेस से कीमतों की तुलना करते हैं ताकि आप हमेशा जीतें।</p>
-            </div>
-
-            <div class="comparison-container">
-                <!-- Product Overview -->
-                <div class="compare-product-info">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Product">
-                    <div class="info-details">
-                        <span class="category-tag">Audio & Music</span>
-                        <h3>Sony WH-1000XM5 Wireless Headphones</h3>
-                        <div class="rating-stars">⭐⭐⭐⭐⭐ (4.8/5)</div>
-                    </div>
-                </div>
-
-                <!-- Marketplace Comparison Cards -->
-                <div class="comparison-grid">
-                    
-                    <!-- Amazon - The Best Deal -->
-                    <div class="compare-card best-value">
-                        <div class="winner-badge">Best Available Option</div>
-                        <div class="marketplace-header">
-                            <span class="m-logo amazon">Amazon</span>
-                            <span class="last-updated">Updated: 2m ago</span>
-                        </div>
-                        <div class="compare-price">
-                            <span class="price-label">Price</span>
-                            <span class="value">₹24,990</span>
-                        </div>
-                        <div class="compare-status">
-                            <span class="status available">In Stock</span>
-                            <span class="rating">4.8 Rating</span>
-                        </div>
-                        <button class="btn-compare">Go to Amazon →</button>
-                    </div>
-
-                    <!-- Flipkart -->
-                    <div class="compare-card">
-                        <div class="marketplace-header">
-                            <span class="m-logo flipkart">Flipkart</span>
-                            <span class="last-updated">Updated: 1h ago</span>
-                        </div>
-                        <div class="compare-price">
-                            <span class="price-label">Price</span>
-                            <span class="value">₹26,499</span>
-                        </div>
-                        <div class="compare-status">
-                            <span class="status available">In Stock</span>
-                            <span class="rating">4.6 Rating</span>
-                        </div>
-                        <button class="btn-compare outline">Go to Flipkart →</button>
-                    </div>
-
-                    <!-- Meesho/Other -->
-                    <div class="compare-card">
-                        <div class="marketplace-header">
-                            <span class="m-logo meesho">Meesho</span>
-                            <span class="last-updated">Updated: 5h ago</span>
-                        </div>
-                        <div class="compare-price">
-                            <span class="price-label">Price</span>
-                            <span class="value">₹27,100</span>
-                        </div>
-                        <div class="compare-status">
-                            <span class="status out-of-stock">Few Left</span>
-                            <span class="rating">4.2 Rating</span>
-                        </div>
-                        <button class="btn-compare outline">Go to Meesho →</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SECTION 06: TRENDING EXPERIENCE -->
-    <section class="trending-experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">🔥 Trending Now</h2>
-                <p>वही देखें जो हर कोई पसंद कर रहा है</p>
-            </div>
-
-            <div class="trending-layout">
-                <!-- Large Feature Product -->
-                <div class="trend-hero">
-                    <div class="trend-badge">Editor's Choice</div>
-                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80" alt="Laptop">
-                    <div class="trend-hero-content">
-                        <span class="platform-tag" style="color: var(--mint);">Premium Deal</span>
-                        <h3>MacBook Air M2 - Supreme Performance</h3>
-                        <p>क्रिएटिव लोगों के लिए बेहतरीन लैपटॉप। अब तक की सबसे कम कीमत पर उपलब्ध।</p>
-                        <div class="pricing">
-                            <span class="current-price" style="color: white;">₹84,990</span>
-                            <span class="old-price" style="color: #bbb; text-decoration: line-through; margin-left: 10px;">₹1,14,900</span>
-                        </div>
-                        <button class="btn-main" style="background: var(--mint); color: var(--black); margin-top: 20px; border:none;">अभी खरीदें</button>
-                    </div>
-    <!-- SECTION 03: TRUST STRIP -->
-    <section class="trust-strip">
-        <div class="container trust-grid">
-            <div class="trust-item">
-                <span class="trust-icon">🔎</span>
-                <div class="trust-text">
-                    <h3>Compare</h3>
-                    <p>कीमतों की तुलना करें</p>
-                </div>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">💰</span>
-                <div class="trust-text">
-                    <h3>Better Deals</h3>
-                    <p>बचत का सही रास्ता</p>
-                </div>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">⭐</span>
-                <div class="trust-text">
-                    <h3>Discover</h3>
-                    <p>बेहतरीन प्रोडक्ट्स</p>
-                </div>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">🔒</span>
-                <div class="trust-text">
-                    <h3>Trusted</h3>
-                    <p>भरोसेमंद प्लेटफॉर्म्स</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 04: TODAY'S DEALS -->
-    <section class="deals-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">🔥 आज की शानदार Deals</h2>
-                <a href="#" class="view-all">View All →</a>
-            </div>
-            
-            <div class="pr<div class="product-grid" id="home-deals-grid"></div>">
-                <!-- Demo Product Card 1 -->
-                <div class="product-card">
-                    <div class="product-badge">60% OFF</div>
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Watch">
-                        <button class="wishlist-btn">❤️</button>
-                    </div>
-                    <div class="product-info">
-                        <span class="platform-tag">Amazon</span>
-                        <h3 class="product-name">Premium Minimalist Watch</h3>
-                        <div class="pricing">
-                            <span class="current-price">₹1,499</span>
-                            <span class="old-price">₹3,999</span>
-                        </div>
-                        <button class="deal-cta">View Deal</button>
-                    </div>
-                </div>
-
-                <!-- Demo Product Card 2 -->
-                <div class="product-card">
-                    <div class="product-badge">45% OFF</div>
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Headphones">
-                        <button class="wishlist-btn">❤️</button>
-                    </div>
-                    <div class="product-info">
-                        <span class="platform-tag">Flipkart</span>
-                        <h3 class="product-name">Wireless Noise Cancelling Headphones</h3>
-                        <div class="pricing">
-                            <span class="current-price">₹4,299</span>
-                            <span class="old-price">₹8,499</span>
-                        </div>
-                        <button class="deal-cta">View Deal</button>
-                    </div>
-                </div>
-
-                <!-- Demo Product Card 3 -->
-                <div class="product-card">
-                    <div class="product-badge">Top Rated</div>
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Shoes">
-                        <button class="wishlist-btn">❤️</button>
-                    </div>
-                    <div class="product-info">
-                        <span class="platform-tag">Meesho</span>
-                        <h3 class="product-name">Sport Performance Sneakers</h3>
-                        <div class="pricing">
-                            <span class="current-price">₹899</span>
-                            <span class="old-price">₹1,999</span>
-                        </div>
-                        <button class="deal-cta">View Deal</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SECTION 01: PREMIUM NAVBAR -->
+    <!-- 👑 SECTION 01: PREMIUM NAVBAR -->
     <header class="navbar">
         <div class="container nav-wrap">
-            <div class="logo">SHOPNOVA</div>
+            <div class="brand-logo">
+                <span class="crown">👑</span> SHOP<span>NOVA</span>
+            </div>
             <nav class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="#">Categories</a>
-                <a href="#">🔥 Deals</a>
-                <a href="#">⭐ Trending</a>
-                <a href="#">❤️ Wishlist</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="deals.html">🔥 Deals</a>
+                <a href="trending.html">⭐ Trending</a>
+                <a href="wishlist.html">❤️ Wishlist</a>
             </nav>
             <div class="nav-right">
                 <button class="search-trigger">🔎</button>
@@ -340,100 +26,38 @@
         </div>
     </header>
 
-    <!-- SECTION 02: CINEMATIC HERO -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-headline">हर शानदार Deal, एक ही जगह!</h1>
-                <p class="hero-subtext">Amazon, Flipkart और Meesho के शानदार Products और Deals खोजें, Compare करें और अपने लिए बेहतर विकल्प चुनें।</p>
-                
-                <!-- Intelligent Search Bar -->
-                <div class="search-container">
-                    <div class="search-bar">
-                        <input type="text" placeholder="आप क्या खोज रहे हैं?">
-                        <button class="search-btn">खोजें</button>
-                    </div>
-                    <div class="search-suggestions">
-                        <span>🔥 Popular:</span>
-                        <a href="#">Smartphones</a>
-                        <a href="#">Laptops</a>
-                        <a href="#">Airpods</a>
-                    </div>
-                </div>
-
-                <div class="hero-ctas">
-                    <button class="btn-main">🔥 Best Deals</button>
-                    <button class="btn-outline">⭐ Trending</button>
-                </div>
+    <!-- 🎬 SECTION 02: CINEMATIC HERO (The Poster) -->
+    <section class="hero-poster">
+        <div class="poster-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80" class="poster-img" alt="Shopping Poster">
+        <div class="hero-content">
+            <h1 class="hero-headline">हर शानदार Deal, एक ही जगह!</h1>
+            <p class="hero-subtext">बेहतर खोजिए, समझदारी से खरीदिए। Amazon, Flipkart और Meesho के बेहतरीन विकल्प अब आपकी उंगलियों पर।</p>
+            <div class="search-portal">
+                <input type="text" placeholder="आप क्या खोज रहे हैं?">
+                <button class="search-btn">खोजें</button>
             </div>
         </div>
-        
-        <!-- Subtle Visual Element -->
-        <div class="hero-visual"></div>
     </section>
 
+    <!-- 🔒 SECTION 03: TRUST STRIP -->
+    <section class="trust-strip">
+        <div class="container trust-grid">
+            <div class="trust-card"><span>🔎</span> Compare Prices</div>
+            <div class="trust-card"><span>💰</span> Best Value</div>
+            <div class="trust-card"><span>⭐</span> Verified Products</div>
+            <div class="trust-card"><span>🔒</span> Trusted Platforms</div>
+        </div>
+    </section>
+
+    <!-- ⚖️ SECTION 07: SMART COMPARISON -->
+    <section class="comparison-section container">
+        <h2 class="section-heading">⚖️ कहाँ बेहतर Deal मिल रही है?</h2>
+        <div class="comparison-grid" id="home-deals-grid">
+            <!-- Products will load here via script.js -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
-<!-- SECTION 05: CATEGORY UNIVERSE -->
-    <section class="category-universe">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">🛍️ Explore Categories</h2>
-                <p>अपनी पसंद की कैटेगरी चुनें</p>
-            </div>
-
-            <div class="category-grid">
-                <!-- Category 1: Electronics -->
-                <div class="category-tile large">
-                    <div class="cat-overlay"></div>
-                    <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=80" alt="Electronics">
-                    <div class="cat-content">
-                        <h3>Electronics</h3>
-                        <span class="cat-count">1200+ Products</span>
-                        <a href="#" class="cat-link">Explore →</a>
-                    </div>
-                </div>
-
-                <!-- Category 2: Fashion -->
-                <div class="category-tile">
-                    <div class="cat-overlay"></div>
-                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=80" alt="Fashion">
-                    <div class="cat-content">
-                        <h3>Fashion</h3>
-                        <a href="#" class="cat-link">Explore →</a>
-                    </div>
-                </div>
-
-                <!-- Category 3: Home -->
-                <div class="category-tile">
-                    <div class="cat-overlay"></div>
-                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Home">
-                    <div class="cat-content">
-                        <h3>Home Decor</h3>
-                        <a href="#" class="cat-link">Explore →</a>
-                    </div>
-                </div>
-
-                <!-- Category 4: Beauty -->
-                <div class="category-tile">
-                    <div class="cat-overlay"></div>
-                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80" alt="Beauty">
-                    <div class="cat-content">
-                        <h3>Beauty</h3>
-                        <a href="#" class="cat-link">Explore →</a>
-                    </div>
-                </div>
-
-                <!-- Category 5: Audio -->
-                <div class="category-tile">
-                    <div class="cat-overlay"></div>
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Audio">
-                    <div class="cat-content">
-                        <h3>Audio</h3>
-                        <a href="#" class="cat-link">Explore →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<script src="script.js"></script>
