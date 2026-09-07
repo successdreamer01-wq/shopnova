@@ -8,92 +8,72 @@
 </head>
 <body>
 
-    <!-- 🌌 NEURAL NETWORK BACKGROUND OVERLAY -->
-    <div class="neural-overlay"></div>
+    <!-- 🌌 DATA FLOW OVERLAY -->
+    <div class="data-stream-bg"></div>
 
-    <!-- 💎 SUPREME V7 NAVIGATION (Floating) -->
+    <!-- 💎 SUPREME NAVBAR -->
     <header class="navbar">
         <div class="container nav-wrap">
             <div class="brand-logo">👑 SHOP<span>NOVA.LIFE</span></div>
             <nav class="nav-links">
-                <a href="index.html" class="active">The Citadel</a>
-                <a href="deals.html">Market Intelligence</a>
-                <a href="trending.html">Global Flow</a>
-                <a href="wishlist.html">The Vault</a>
+                <a href="index.html" class="active">Command Center</a>
+                <a href="deals.html">Live Deals</a>
+                <a href="trending.html">Trends</a>
+                <a href="wishlist.html">Vault</a>
             </nav>
             <div class="nav-right">
-                <div class="status-pill"><span class="glow-dot"></span> HUB SECURE</div>
+                <div class="hub-id">NODE: 001_GLOBAL</div>
             </div>
         </div>
     </header>
 
-    <!-- 🏙️ SUPREME HERO (The Skyscraper Core) -->
+    <!-- 🏙️ THE HUB HERO (Skyscraper + 3 Platforms) -->
     <section class="citadel-hero">
         <div class="visual-engine">
-            <!-- आपकी पसंदीदा बिल्डिंग वाली फोटो -->
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=100" class="core-hq-img" alt="Shopnova Global HQ">
-            <div class="core-depth-mask"></div>
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=100" class="core-hq-img" alt="Shopnova HQ">
+            <div class="core-mask"></div>
         </div>
         
         <div class="core-content container">
-            <div class="elite-badge">MULTINATIONAL COMMERCE INFRASTRUCTURE</div>
-            <h1 class="core-headline">UNLIMITED <br><span>SUPREMACY.</span></h1>
-            <p class="core-description">SHOPNOVA.LIFE दुनिया का सबसे उन्नत शॉपिंग इंजन है। हम Amazon, Flipkart और Meesho के ग्लोबल डेटा को प्रोसेस करके आपके लिए बेहतरीन डील्स लाते हैं।</p>
+            <div class="platform-nodes">
+                <span class="node amazon">AMAZON</span>
+                <span class="node flipkart">FLIPKART</span>
+                <span class="node meesho">MEESHO</span>
+            </div>
+
+            <h1 class="core-headline">SUPREME <br><span>INTELLIGENCE.</span></h1>
+            <p class="core-description">SHOPNOVA.LIFE दुनिया का एकमात्र 'Elite Hub' है जो Amazon, Flipkart और Meesho के डेटा को डिकोड करके आपके लिए श्रेष्ठ विकल्प चुनता है।</p>
             
-            <div class="neural-search-portal">
+            <div class="neural-search">
                 <input type="text" placeholder="Global Marketplace स्कैन करें...">
-                <button class="portal-trigger">INITIALIZE SCAN</button>
+                <button class="scan-trigger">SCAN ENGINE</button>
+            </div>
+
+            <!-- LIVE METRICS -->
+            <div class="metrics-bar">
+                <div class="metric"><b class="amazon-color">AMZ</b> 99.8% Sync</div>
+                <div class="metric"><b class="flipkart-color">FK</b> 99.7% Sync</div>
+                <div class="metric"><b class="meesho-color">MSH</b> 99.9% Sync</div>
             </div>
         </div>
     </section>
 
-    <!-- 🛒 INTEGRATED MARKETPLACES (AMAZON, FLIPKART, MEESHO CARDS) -->
-    <section class="container gateway-section">
-        <h3 class="gateway-title">SUPPORTED MARKETPLACES</h3>
-        <div class="gateway-grid">
-            
-            <!-- Amazon Card -->
-            <div class="platform-card amazon-card">
-                <div class="p-status"><span class="p-dot"></span> INTEGRATED</div>
-                <h2 class="p-logo">AMAZON</h2>
-                <p>Unlock supreme deals directly from Amazon's global database.</p>
-                <a href="#" class="p-btn">ACCESS DEALS →</a>
-            </div>
-
-            <!-- Flipkart Card -->
-            <div class="platform-card flipkart-card">
-                <div class="p-status"><span class="p-dot"></span> INTEGRATED</div>
-                <h2 class="p-logo">FLIPKART</h2>
-                <p>Scan and compare the best prices from Flipkart's active inventory.</p>
-                <a href="#" class="p-btn">ACCESS DEALS →</a>
-            </div>
-
-            <!-- Meesho Card -->
-            <div class="platform-card meesho-card">
-                <div class="p-status"><span class="p-dot"></span> INTEGRATED</div>
-                <h2 class="p-logo">MEESHO</h2>
-                <p>Discover hidden value and extreme discounts from Meesho.</p>
-                <a href="#" class="p-btn">ACCESS DEALS →</a>
-            </div>
-
+    <!-- 🛍️ INTEGRATED PLATFORMS STRIP -->
+    <section class="platform-strip">
+        <div class="container strip-flex">
+            <div class="p-brand">AMAZON <span>VERIFIED</span></div>
+            <div class="p-brand">FLIPKART <span>ACTIVE</span></div>
+            <div class="p-brand">MEESHO <span>LIVE</span></div>
         </div>
     </section>
 
-    <!-- ⚖️ THE PRODUCT MATRIX -->
+    <!-- ⚖️ PRODUCT MATRIX GRID -->
     <section class="container matrix-container">
         <h2 class="matrix-title">⚖️ Intelligence-Based Comparison</h2>
         <div class="product-grid" id="home-deals-grid">
-            <!-- script.js will auto-inject high-end products here -->
+            <!-- script.js will inject products here -->
         </div>
     </section>
-
-    <!-- FOOTER SUPREME -->
-    <footer class="supreme-footer">
-        <div class="container footer-content">
-            <div class="footer-logo">👑 SHOPNOVA.LIFE</div>
-            <p>The Global Standard in Shopping Intelligence. © 2024</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
