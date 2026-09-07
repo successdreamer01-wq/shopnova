@@ -1,149 +1,74 @@
-/* 👑 SHOPNOVA ULTRA-DARK NEON SYSTEM */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
 
 :root {
-    --bg: #0a0a0c;
-    --card: #16161a;
-    --mint: #00ff88;
-    --text: #ffffff;
-    --text-dim: #a1a1aa;
-    --glow: rgba(0, 255, 136, 0.2);
-    --grad: linear-gradient(135deg, #00ff88 0%, #00bd65 100%);
+    --gold: #D4AF37;
+    --navy: #0A1128;
+    --white: #ffffff;
+    --gray: #f8f9fa;
 }
 
-body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-/* 1. लग्जरी नेवबार */
-.navbar {
-    background: rgba(10, 10, 12, 0.8);
-    backdrop-filter: blur(20px);
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.logo { 
-    font-size: 24px; 
-    font-weight: 800; 
-    color: var(--mint); 
-    text-shadow: 0 0 15px var(--glow);
-}
-
-/* 2. धमाकेदार हीरो सेक्शन */
-.hero {
-    padding: 200px 0 100px 0;
-    text-align: center;
-    background: radial-gradient(circle at top, #161b22 0%, #0a0a0c 100%);
-}
-
-.hero-headline {
-    font-size: 80px;
-    font-weight: 800;
-    letter-spacing: -2px;
-    margin-bottom: 30px;
-    color: var(--white);
-    line-height: 1;
-}
-
-.hero-headline span {
-    color: var(--mint);
-    text-shadow: 0 0 30px var(--glow);
-}
-
-/* 3. धाकड़ सर्च बार */
-.search-bar {
-    max-width: 650px;
-    margin: 0 auto;
-    background: var(--card);
-    padding: 8px;
-    border-radius: 100px;
-    display: flex;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-}
-
-.search-bar input {
-    flex: 1; border: none; background: none; padding: 0 25px; 
-    font-size: 18px; color: white; outline: none;
-}
-
-.search-btn {
-    background: var(--grad); color: #000;
-    padding: 15px 40px; border-radius: 100px; font-weight: 800;
-    cursor: pointer; transition: 0.3s;
-}
-
-.search-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--mint); }
-
-/* 4. नियॉन प्रोडक्ट कार्ड्स */
+body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray); color: var(--navy); }
 .container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    padding: 80px 0;
+/* 👑 PREMIUM LOGO & NAVBAR */
+.navbar {
+    background: var(--white); padding: 25px 0; position: sticky; top: 0; z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
+.nav-wrap { display: flex; justify-content: space-between; align-items: center; }
+
+.brand-logo { font-size: 26px; font-weight: 800; letter-spacing: 2px; }
+.brand-logo span { color: var(--gold); }
+.crown { font-size: 20px; vertical-align: middle; }
+
+.nav-links a { text-decoration: none; color: var(--navy); margin: 0 20px; font-weight: 600; opacity: 0.7; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold); }
+
+/* 🎬 CINEMATIC HERO (Poster) */
+.hero-poster {
+    position: relative; height: 85vh; display: flex; align-items: center; justify-content: center;
+    overflow: hidden; text-align: center; color: var(--white);
+}
+.poster-img { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.poster-overlay { position: absolute; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(10,17,40,0.8), rgba(10,17,40,0.4)); z-index: 0; }
+
+.hero-content { z-index: 1; max-width: 900px; padding: 0 20px; }
+.hero-headline { font-size: 64px; font-weight: 800; margin-bottom: 20px; line-height: 1.1; }
+.hero-subtext { font-size: 20px; margin-bottom: 40px; opacity: 0.9; }
+
+.search-portal {
+    background: var(--white); padding: 10px; border-radius: 100px; display: flex;
+    max-width: 700px; margin: 0 auto; box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.search-portal input { flex: 1; border: none; padding: 0 30px; font-size: 18px; outline: none; }
+.search-btn { background: var(--navy); color: var(--white); padding: 18px 45px; border-radius: 100px; font-weight: 800; border: none; cursor: pointer; }
+
+/* 🔒 TRUST STRIP */
+.trust-strip { background: var(--navy); color: var(--white); padding: 30px 0; }
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+.trust-card { font-weight: 600; opacity: 0.8; font-size: 15px; }
+.trust-card span { display: block; font-size: 24px; margin-bottom: 10px; }
+
+/* ⚖️ PRODUCT CARDS */
+.section-heading { font-size: 36px; margin: 80px 0 40px 0; text-align: center; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
 
 .product-card {
-    background: var(--card);
-    border-radius: 30px;
-    padding: 25px;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
+    background: var(--white); border-radius: 20px; overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.5s; position: relative;
 }
+.product-card:hover { transform: translateY(-15px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+.product-badge { position: absolute; top: 20px; left: 20px; background: var(--gold); color: #000; padding: 6px 15px; border-radius: 100px; font-weight: 800; font-size: 12px; z-index: 2;}
 
-.product-card:hover {
-    transform: translateY(-15px);
-    border-color: var(--mint);
-    box-shadow: 0 30px 60px rgba(0, 255, 136, 0.1);
-}
+.product-img { height: 350px; background: #fff; padding: 20px; }
+.product-img img { width: 100%; height: 100%; object-fit: contain; }
 
-.product-img img {
-    width: 100%;
-    height: 280px;
-    object-fit: contain;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
-}
-
-.product-badge {
-    position: absolute; top: 25px; left: 25px;
-    background: var(--grad); color: #000;
-    padding: 6px 15px; border-radius: 100px; font-size: 12px; font-weight: 800;
-}
-
-.product-info { margin-top: 20px; }
-.platform-tag { color: var(--mint); font-size: 12px; font-weight: 700; text-transform: uppercase; }
-.product-name { font-size: 22px; font-weight: 700; margin: 10px 0; color: white; }
-.current-price { font-size: 28px; font-weight: 800; color: var(--white); }
-.old-price { color: var(--text-dim); text-decoration: line-through; margin-left: 10px; font-size: 16px; }
+.product-info { padding: 30px; }
+.platform-tag { color: var(--gold); font-weight: 800; font-size: 12px; text-transform: uppercase; }
+.product-name { font-size: 22px; font-weight: 700; margin: 15px 0; }
+.current-price { font-size: 28px; font-weight: 800; }
 
 .deal-cta {
-    margin-top: 25px;
-    background: var(--grad);
-    color: #000;
-    padding: 18px;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: 800;
-    text-decoration: none;
-    display: block;
-    transition: 0.3s;
-}
-
-.deal-cta:hover { letter-spacing: 1px; }
-
-/* 5. मोबाइल के लिए */
-@media (max-width: 768px) {
-    .hero-headline { font-size: 45px; }
+    margin-top: 30px; display: block; text-align: center; text-decoration: none;
+    background: var(--navy); color: var(--white); padding: 20px; border-radius: 12px; font-weight: 800;
 }
